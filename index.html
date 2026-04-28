@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Mobil Sejahtera - Sewa Mobil Terpercaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-car"></i> Rental Mobil Sejahtera
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#mobil">Daftar Mobil</a></li>
+                <li><a href="#pesan">Pesan</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Rental Mobil Terbaik untuk Perjalanan Anda</h1>
+            <p>Sewa mobil berkualitas dengan harga terjangkau. Tersedia berbagai pilihan mobil untuk kebutuhan harian, wisata, maupun bisnis.</p>
+            <a href="#mobil" class="btn btn-primary">Lihat Pilihan Mobil</a>
+        </div>
+    </section>
+
+    <!-- Daftar Mobil Section -->
+    <section id="mobil" class="section mobil-section">
+        <div class="container">
+            <h2 class="section-title">Pilihan Mobil Kami</h2>
+            <p class="section-subtitle">Temukan mobil terbaik sesuai kebutuhan Anda</p>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="semua">Semua</button>
+                <button class="filter-btn" data-filter="city-car">City Car</button>
+                <button class="filter-btn" data-filter="mpv">MPV</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="sedan">Sedan</button>
+                <button class="filter-btn" data-filter="minibus">Minibus</button>
+            </div>
+
+            <!-- Mobil Grid -->
+            <div class="mobil-grid" id="mobilGrid">
+                <!-- Mobil akan di-generate oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Pemesanan Section -->
+    <section id="pesan" class="section pesan-section">
+        <div class="container">
+            <h2 class="section-title">Form Pemesanan</h2>
+            <p class="section-subtitle">Isi data berikut untuk memesan mobil</p>
+            <form id="formPesan" class="form-pesan">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+                <div class="form-group">
+                    <label for="hp">Nomor Telepon / WhatsApp</label>
+                    <input type="tel" id="hp" name="hp" placeholder="Contoh: 081234567890" required>
+                </div>
+                <div class="form-group">
+                    <label for="pilihanMobil">Pilihan Mobil</label>
+                    <select id="pilihanMobil" name="pilihanMobil" required>
+                        <option value="" disabled selected>-- Pilih Mobil --</option>
+                        <option value="Toyota Avanza">Toyota Avanza - Rp 350.000/hari</option>
+                        <option value="Daihatsu Xenia">Daihatsu Xenia - Rp 350.000/hari</option>
+                        <option value="Suzuki Ertiga">Suzuki Ertiga - Rp 400.000/hari</option>
+                        <option value="Toyota Innova">Toyota Innova - Rp 550.000/hari</option>
+                        <option value="Toyota Fortuner">Toyota Fortuner - Rp 900.000/hari</option>
+                        <option value="Mitsubishi Pajero">Mitsubishi Pajero Sport - Rp 900.000/hari</option>
+                        <option value="Honda CR-V">Honda CR-V - Rp 700.000/hari</option>
+                        <option value="Honda HR-V">Honda HR-V - Rp 600.000/hari</option>
+                        <option value="Honda Brio">Honda Brio - Rp 250.000/hari</option>
+                        <option value="Toyota Agya">Toyota Agya - Rp 250.000/hari</option>
+                        <option value="Toyota Yaris">Toyota Yaris - Rp 300.000/hari</option>
+                        <option value="Toyota Camry">Toyota Camry - Rp 800.000/hari</option>
+                        <option value="Toyota Alphard">Toyota Alphard - Rp 1.500.000/hari</option>
+                        <option value="Isuzu Elf">Isuzu Elf - Rp 800.000/hari</option>
+                        <option value="Toyota Hiace">Toyota Hiace - Rp 900.000/hari</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tglAmbil">Tanggal Ambil</label>
+                        <input type="date" id="tglAmbil" name="tglAmbil" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tglKembali">Tanggal Kembali</label>
+                        <input type="date" id="tglKembali" name="tglKembali" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="catatan">Catatan Tambahan (Opsional)</label>
+                    <textarea id="catatan" name="catatan" rows="3" placeholder="Contoh: butuh sopir, antar jemput bandara, dll."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="section tentang-section">
+        <div class="container">
+            <div class="tentang-content">
+                <div class="tentang-text">
+                    <h2 class="section-title">Tentang Kami</h2>
+                    <p><strong>Rental Mobil Sejahtera</strong> adalah perusahaan rental mobil terpercaya yang telah berpengalaman melayani pelanggan selama lebih dari 10 tahun.</p>
+                    <p>Kami menyediakan berbagai jenis mobil mulai dari city car, MPV, SUV, sedan, hingga minibus untuk memenuhi kebutuhan perjalanan Anda. Semua mobil kami dalam kondisi prima, terawat, dan siap pakai.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Mobil bersih & terawat</li>
+                        <li><i class="fas fa-check-circle"></i> Harga bersaing & transparan</li>
+                        <li><i class="fas fa-check-circle"></i> Sopir berpengalaman (opsional)</li>
+                        <li><i class="fas fa-check-circle"></i> Layanan 24 jam</li>
+                        <li><i class="fas fa-check-circle"></i> Antar jemput gratis (area tertentu)</li>
+                    </ul>
+                </div>
+                <div class="tentang-image">
+                    <img src="https://images.unsplash.com/photo-1449965408869-e8f2e9d70f8f?auto=format&fit=crop&w=600&q=80" alt="Mobil rental">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="section kontak-section">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <p class="section-subtitle">Kami siap membantu kebutuhan perjalanan Anda</p>
+            <div class="kontak-grid">
+                <div class="kontak-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>0812-3456-7890</p>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-small">Chat Sekarang</a>
+                </div>
+                <div class="kontak-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telepon</h3>
+                    <p>(021) 1234-5678</p>
+                    <p>Setiap hari 08.00 - 20.00</p>
+                </div>
+                <div class="kontak-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@rentalmobilsejahtera.id</p>
+                </div>
+                <div class="kontak-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Alamat</h3>
+                    <p>Jl. Sudirman No. 123<br>Jakarta Pusat, DKI Jakarta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-car"></i> Rental Mobil Sejahtera</h3>
+                    <p>Partner perjalanan terpercaya Anda. Sewa mobil mudah, cepat, dan aman.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#mobil">Daftar Mobil</a></li>
+                        <li><a href="#pesan">Pemesanan</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-sosial">
+                    <h4>Ikuti Kami</h4>
+                    <div class="sosial-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rental Mobil Sejahtera. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
