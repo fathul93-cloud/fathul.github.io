@@ -262,7 +262,7 @@ function setupForm() {
             `${catatan ? `*Catatan:* ${catatan}\n` : ''}\n` +
             `Terima kasih.`;
 
-        const url = `https://wa.me/6281234567890?text=${encodeURIComponent(pesan)}`;
+        const url = `https://wa.me/6281946606691?text=${encodeURIComponent(pesan)}`;
         window.open(url, '_blank');
     });
 }

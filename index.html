@@ -1,286 +1,211 @@
-// Data Mobil
-const mobilData = [
-    {
-        id: 1,
-        nama: "Toyota Avanza",
-        kategori: "mpv",
-        harga: "Rp 350.000",
-        transmisi: "Manual",
-        bbm: "Pertalite",
-        kursi: "7 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1626847037657-fd3622613ce3?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 2,
-        nama: "Daihatsu Xenia",
-        kategori: "mpv",
-        harga: "Rp 350.000",
-        transmisi: "Manual",
-        bbm: "Pertalite",
-        kursi: "7 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 3,
-        nama: "Suzuki Ertiga",
-        kategori: "mpv",
-        harga: "Rp 400.000",
-        transmisi: "Manual",
-        bbm: "Pertalite",
-        kursi: "7 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 4,
-        nama: "Toyota Innova",
-        kategori: "mpv",
-        harga: "Rp 550.000",
-        transmisi: "Manual",
-        bbm: "Pertamax",
-        kursi: "7 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 5,
-        nama: "Toyota Fortuner",
-        kategori: "suv",
-        harga: "Rp 900.000",
-        transmisi: "Otomatis",
-        bbm: "Pertamax",
-        kursi: "7 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 6,
-        nama: "Mitsubishi Pajero Sport",
-        kategori: "suv",
-        harga: "Rp 900.000",
-        transmisi: "Otomatis",
-        bbm: "Pertamax",
-        kursi: "7 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 7,
-        nama: "Honda CR-V",
-        kategori: "suv",
-        harga: "Rp 700.000",
-        transmisi: "Otomatis",
-        bbm: "Pertamax",
-        kursi: "5 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 8,
-        nama: "Honda HR-V",
-        kategori: "suv",
-        harga: "Rp 600.000",
-        transmisi: "Otomatis",
-        bbm: "Pertamax",
-        kursi: "5 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 9,
-        nama: "Honda Brio",
-        kategori: "city-car",
-        harga: "Rp 250.000",
-        transmisi: "Manual",
-        bbm: "Pertalite",
-        kursi: "5 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 10,
-        nama: "Toyota Agya",
-        kategori: "city-car",
-        harga: "Rp 250.000",
-        transmisi: "Manual",
-        bbm: "Pertalite",
-        kursi: "5 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 11,
-        nama: "Toyota Yaris",
-        kategori: "city-car",
-        harga: "Rp 300.000",
-        transmisi: "Otomatis",
-        bbm: "Pertalite",
-        kursi: "5 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 12,
-        nama: "Toyota Camry",
-        kategori: "sedan",
-        harga: "Rp 800.000",
-        transmisi: "Otomatis",
-        bbm: "Pertamax",
-        kursi: "5 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 13,
-        nama: "Toyota Alphard",
-        kategori: "mpv",
-        harga: "Rp 1.500.000",
-        transmisi: "Otomatis",
-        bbm: "Pertamax",
-        kursi: "7 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 14,
-        nama: "Isuzu Elf",
-        kategori: "minibus",
-        harga: "Rp 800.000",
-        transmisi: "Manual",
-        bbm: "Solar",
-        kursi: "16 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1566008885218-90abf9200ddb?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-        id: 15,
-        nama: "Toyota Hiace",
-        kategori: "minibus",
-        harga: "Rp 900.000",
-        transmisi: "Manual",
-        bbm: "Solar",
-        kursi: "15 Penumpang",
-        gambar: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=400&q=80"
-    }
-];
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Mobil Sejahtera - Sewa Mobil Terpercaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-// Render Mobil
-function renderMobil(data) {
-    const grid = document.getElementById('mobilGrid');
-    grid.innerHTML = data.map(mobil => `
-        <div class="mobil-card" data-kategori="${mobil.kategori}">
-            <div class="mobil-image">
-                <img src="${mobil.gambar}" alt="${mobil.nama}" loading="lazy">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-car"></i> Rental Mobil Sejahtera
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#mobil">Daftar Mobil</a></li>
+                <li><a href="#pesan">Pesan</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Rental Mobil Terbaik untuk Perjalanan Anda</h1>
+            <p>Sewa mobil berkualitas dengan harga terjangkau. Tersedia berbagai pilihan mobil untuk kebutuhan harian, wisata, maupun bisnis.</p>
+            <a href="#mobil" class="btn btn-primary">Lihat Pilihan Mobil</a>
+        </div>
+    </section>
+
+    <!-- Daftar Mobil Section -->
+    <section id="mobil" class="section mobil-section">
+        <div class="container">
+            <h2 class="section-title">Pilihan Mobil Kami</h2>
+            <p class="section-subtitle">Temukan mobil terbaik sesuai kebutuhan Anda</p>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="semua">Semua</button>
+                <button class="filter-btn" data-filter="city-car">City Car</button>
+                <button class="filter-btn" data-filter="mpv">MPV</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="sedan">Sedan</button>
+                <button class="filter-btn" data-filter="minibus">Minibus</button>
             </div>
-            <div class="mobil-info">
-                <span class="kategori">${mobil.kategori.toUpperCase()}</span>
-                <h3>${mobil.nama}</h3>
-                <div class="harga">${mobil.harga} / hari</div>
-                <div class="fitur">
-                    <span><i class="fas fa-cogs"></i> ${mobil.transmisi}</span>
-                    <span><i class="fas fa-gas-pump"></i> ${mobil.bbm}</span>
-                    <span><i class="fas fa-users"></i> ${mobil.kursi}</span>
-                </div>
-                <a href="#pesan" class="btn-pesan" onclick="pilihMobil('${mobil.nama}')">Pesan Sekarang</a>
+
+            <!-- Mobil Grid -->
+            <div class="mobil-grid" id="mobilGrid">
+                <!-- Mobil akan di-generate oleh JavaScript -->
             </div>
         </div>
-    `).join('');
-}
+    </section>
 
-// Filter Mobil
-function setupFilter() {
-    const buttons = document.querySelectorAll('.filter-btn');
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-            const cards = document.querySelectorAll('.mobil-card');
-            cards.forEach(card => {
-                if (filter === 'semua' || card.dataset.kategori === filter) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        });
-    });
-}
+    <!-- Form Pemesanan Section -->
+    <section id="pesan" class="section pesan-section">
+        <div class="container">
+            <h2 class="section-title">Form Pemesanan</h2>
+            <p class="section-subtitle">Isi data berikut untuk memesan mobil</p>
+            <form id="formPesan" class="form-pesan">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+                <div class="form-group">
+                    <label for="hp">Nomor Telepon / WhatsApp</label>
+<input type="tel" id="hp" name="hp" placeholder="Contoh: 081946606691" required>
+                </div>
+                <div class="form-group">
+                    <label for="pilihanMobil">Pilihan Mobil</label>
+                    <select id="pilihanMobil" name="pilihanMobil" required>
+                        <option value="" disabled selected>-- Pilih Mobil --</option>
+                        <option value="Toyota Avanza">Toyota Avanza - Rp 350.000/hari</option>
+                        <option value="Daihatsu Xenia">Daihatsu Xenia - Rp 350.000/hari</option>
+                        <option value="Suzuki Ertiga">Suzuki Ertiga - Rp 400.000/hari</option>
+                        <option value="Toyota Innova">Toyota Innova - Rp 550.000/hari</option>
+                        <option value="Toyota Fortuner">Toyota Fortuner - Rp 900.000/hari</option>
+                        <option value="Mitsubishi Pajero">Mitsubishi Pajero Sport - Rp 900.000/hari</option>
+                        <option value="Honda CR-V">Honda CR-V - Rp 700.000/hari</option>
+                        <option value="Honda HR-V">Honda HR-V - Rp 600.000/hari</option>
+                        <option value="Honda Brio">Honda Brio - Rp 250.000/hari</option>
+                        <option value="Toyota Agya">Toyota Agya - Rp 250.000/hari</option>
+                        <option value="Toyota Yaris">Toyota Yaris - Rp 300.000/hari</option>
+                        <option value="Toyota Camry">Toyota Camry - Rp 800.000/hari</option>
+                        <option value="Toyota Alphard">Toyota Alphard - Rp 1.500.000/hari</option>
+                        <option value="Isuzu Elf">Isuzu Elf - Rp 800.000/hari</option>
+                        <option value="Toyota Hiace">Toyota Hiace - Rp 900.000/hari</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tglAmbil">Tanggal Ambil</label>
+                        <input type="date" id="tglAmbil" name="tglAmbil" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tglKembali">Tanggal Kembali</label>
+                        <input type="date" id="tglKembali" name="tglKembali" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="catatan">Catatan Tambahan (Opsional)</label>
+                    <textarea id="catatan" name="catatan" rows="3" placeholder="Contoh: butuh sopir, antar jemput bandara, dll."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
 
-// Pilih Mobil ke Form
-function pilihMobil(namaMobil) {
-    const select = document.getElementById('pilihanMobil');
-    for (let i = 0; i < select.options.length; i++) {
-        if (select.options[i].value.includes(namaMobil)) {
-            select.selectedIndex = i;
-            break;
-        }
-    }
-    document.getElementById('pesan').scrollIntoView({ behavior: 'smooth' });
-}
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="section tentang-section">
+        <div class="container">
+            <div class="tentang-content">
+                <div class="tentang-text">
+                    <h2 class="section-title">Tentang Kami</h2>
+                    <p><strong>Rental Mobil Sejahtera</strong> adalah perusahaan rental mobil terpercaya yang telah berpengalaman melayani pelanggan selama lebih dari 10 tahun.</p>
+                    <p>Kami menyediakan berbagai jenis mobil mulai dari city car, MPV, SUV, sedan, hingga minibus untuk memenuhi kebutuhan perjalanan Anda. Semua mobil kami dalam kondisi prima, terawat, dan siap pakai.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Mobil bersih & terawat</li>
+                        <li><i class="fas fa-check-circle"></i> Harga bersaing & transparan</li>
+                        <li><i class="fas fa-check-circle"></i> Sopir berpengalaman (opsional)</li>
+                        <li><i class="fas fa-check-circle"></i> Layanan 24 jam</li>
+                        <li><i class="fas fa-check-circle"></i> Antar jemput gratis (area tertentu)</li>
+                    </ul>
+                </div>
+                <div class="tentang-image">
+                    <img src="https://images.unsplash.com/photo-1449965408869-e8f2e9d70f8f?auto=format&fit=crop&w=600&q=80" alt="Mobil rental">
+                </div>
+            </div>
+        </div>
+    </section>
 
-// Navbar Toggle
-function setupNavbar() {
-    const toggle = document.getElementById('navToggle');
-    const menu = document.getElementById('navMenu');
-    toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
+    <!-- Kontak Section -->
+    <section id="kontak" class="section kontak-section">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <p class="section-subtitle">Kami siap membantu kebutuhan perjalanan Anda</p>
+            <div class="kontak-grid">
+                <div class="kontak-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>081946606691</p>
+<a href="https://wa.me/6281946606691" target="_blank" class="btn btn-small">Chat Sekarang</a>
+                </div>
+                <div class="kontak-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telepon</h3>
+                    <p>(021) 1234-5678</p>
+                    <p>Setiap hari 08.00 - 20.00</p>
+                </div>
+                <div class="kontak-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@rentalmobilsejahtera.id</p>
+                </div>
+                <div class="kontak-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Alamat</h3>
+                    <p>Jl. Sudirman No. 123<br>Jakarta Pusat, DKI Jakarta</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Close menu on link click
-    menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('active');
-        });
-    });
-}
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-car"></i> Rental Mobil Sejahtera</h3>
+                    <p>Partner perjalanan terpercaya Anda. Sewa mobil mudah, cepat, dan aman.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#mobil">Daftar Mobil</a></li>
+                        <li><a href="#pesan">Pemesanan</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-sosial">
+                    <h4>Ikuti Kami</h4>
+                    <div class="sosial-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rental Mobil Sejahtera. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
 
-// Smooth Scroll
-function setupSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-}
-
-// Form Submission
-function setupForm() {
-    const form = document.getElementById('formPesan');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const nama = document.getElementById('nama').value;
-        const hp = document.getElementById('hp').value;
-        const mobil = document.getElementById('pilihanMobil').value;
-        const tglAmbil = document.getElementById('tglAmbil').value;
-        const tglKembali = document.getElementById('tglKembali').value;
-        const catatan = document.getElementById('catatan').value;
-
-        if (new Date(tglKembali) <= new Date(tglAmbil)) {
-            alert('Tanggal kembali harus setelah tanggal ambil!');
-            return;
-        }
-
-        const pesan = `Halo, saya ingin menyewa mobil:\n\n` +
-            `*Nama:* ${nama}\n` +
-            `*No. HP:* ${hp}\n` +
-            `*Mobil:* ${mobil}\n` +
-            `*Tanggal Ambil:* ${tglAmbil}\n` +
-            `*Tanggal Kembali:* ${tglKembali}\n` +
-            `${catatan ? `*Catatan:* ${catatan}\n` : ''}\n` +
-            `Terima kasih.`;
-
-        const url = `https://wa.me/6281946606691?text=${encodeURIComponent(pesan)}`;
-        window.open(url, '_blank');
-    });
-}
-
-// Set minimum date to today
-function setMinDate() {
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('tglAmbil').setAttribute('min', today);
-    document.getElementById('tglKembali').setAttribute('min', today);
-}
-
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    renderMobil(mobilData);
-    setupFilter();
-    setupNavbar();
-    setupSmoothScroll();
-    setupForm();
-    setMinDate();
-});
+    <script src="script.js"></script>
+</body>
+</html>
 
